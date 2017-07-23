@@ -1,2 +1,4 @@
 bin
 obj
+Core\bin
+Core\obj
