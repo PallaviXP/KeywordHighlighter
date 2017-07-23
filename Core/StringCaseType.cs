@@ -8,5 +8,11 @@ namespace Core
         capital,
         lower
     }
+
+    public enum WordStyleType
+    {
+        normal,
+        bold
+    }
     
 }

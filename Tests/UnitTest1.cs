@@ -37,7 +37,7 @@ namespace Tests
         public void WhenKeywordPresentInInputShouldReturnWithHighlightedWordsWithDifferentColors()
         {
             string str = "if I am Prime minister as I am thinking like it";
-            string expected = "[red]if[red] I am Prime minister [blue]AS[blue] I am thinking like it";
+            string expected = "[red][bold]if[bold][red] I am Prime minister [blue]AS[blue] I am thinking like it";
             var output = _controller.HighlightKewords(str);
 
             Assert.Equal(expected, output);

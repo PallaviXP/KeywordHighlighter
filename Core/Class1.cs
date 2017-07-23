@@ -10,11 +10,11 @@ namespace Core
         public KeywordController()
         {
             Keywords = new List<Keyword>
-                { new Keyword("if", "red", StringCaseType.lower), 
-                new Keyword("as", "blue", StringCaseType.capital), 
-                new Keyword("and", "red", StringCaseType.capital), 
-                new Keyword("then", "green", StringCaseType.lower), 
-                new Keyword("when", "blue", StringCaseType.lower)            
+                { new Keyword("if", "red", StringCaseType.lower, WordStyleType.bold), 
+                new Keyword("as", "blue", StringCaseType.capital, WordStyleType.normal), 
+                new Keyword("and", "red", StringCaseType.capital, WordStyleType.bold), 
+                new Keyword("then", "green", StringCaseType.lower, WordStyleType.normal), 
+                new Keyword("when", "blue", StringCaseType.lower, WordStyleType.normal)            
             };
         }
         public List<Keyword> Keywords { get; set;}
