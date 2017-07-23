@@ -1,0 +1,6 @@
+E:\KeywordHighlighter\Core\bin\Debug\netstandard1.4\Core.deps.json
+E:\KeywordHighlighter\Core\bin\Debug\netstandard1.4\Core.dll
+E:\KeywordHighlighter\Core\bin\Debug\netstandard1.4\Core.pdb
+E:\KeywordHighlighter\Core\obj\Debug\netstandard1.4\Core.AssemblyInfo.cs
+E:\KeywordHighlighter\Core\obj\Debug\netstandard1.4\Core.dll
+E:\KeywordHighlighter\Core\obj\Debug\netstandard1.4\Core.pdb
