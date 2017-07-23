@@ -4,31 +4,44 @@ using System.Linq;
 
 namespace Core
 {
+    public class Keyword{
+
+        public Keyword(string word, string highlighter)
+        {
+                this.Word = word;
+                this.HighlighterColor = highlighter;
+        }
+        public string Word { get; set;}
+        public string HighlighterColor { get; set;}
+    }
     public class KeywordController
     {
         public KeywordController()
         {
-            Keywords = new List<string>() {"if", "as", "and", "then", "when"};
+            Keywords = new List<Keyword>
+            { new Keyword("if", "red"), 
+            new Keyword("as", "blue"), 
+            new Keyword("and", "red"), 
+            new Keyword("then", "green"), 
+            new Keyword("when", "blue")
+            
+            };
 
         }
-        public List<string> Keywords { get; set;}
+        public List<Keyword> Keywords { get; set;}
         public string HighlightKewords(string input)
         {
             var inputSplitted = input.Split(' ');
-           /* var changedInput = inputSplitted.Select(x=> {
-                if(Keywords.Contains(x))
-                    x = "[blue]" + x  + "[blue]";
-                    return x;
-               }
-                ).ToList();*/
-
-           for(int i=0; i<inputSplitted.Length; i++)
-           {
-               if(Keywords.Contains(inputSplitted[i]))
-                    inputSplitted[i] = "[blue]" + inputSplitted[i]  + "[blue]";
-           }
         
-            return  string.Join(" ", inputSplitted);
+           var output = inputSplitted.Select(x=> { 
+               
+               var G = Keywords.FirstOrDefault(y=> y.Word == x);
+               if(G != null)
+                   x= $"[{G.HighlighterColor}]{x}[{G.HighlighterColor}]";
+               return x;
+            });
+        
+            return  string.Join(" ", output);
         }
     }
 }

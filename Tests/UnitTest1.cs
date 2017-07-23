@@ -32,5 +32,16 @@ namespace Tests
             Assert.Equal(expected, output);
 
         }
+
+         [Fact]
+        public void WhenKeywordPresentInInputShouldReturnWithHighlightedWordsWithDifferentColors()
+        {
+            string str = "if I am Prime minister as I am thinking like it";
+            string expected = "[red]if[red] I am Prime minister [blue]as[blue] I am thinking like it";
+            var output = _controller.HighlightKewords(str);
+
+            Assert.Equal(expected, output);
+
+        }
     }
 }
