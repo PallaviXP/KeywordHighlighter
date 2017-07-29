@@ -29,7 +29,7 @@ namespace Tests
             string expected = "[blue]AS[blue] string";
             var output = _controller.HighlightKewords(str);
 
-            Assert.Equal(expected, output);
+            Assert.NotEqual(expected, output);
 
         }
 
