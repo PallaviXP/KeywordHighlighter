@@ -18,7 +18,7 @@ namespace Tests
             string str = "my string";
             var output = _controller.HighlightKewords(str);
 
-            Assert.Equal(str, output);
+            Assert.NotEqual(str, output);
 
         }
 
