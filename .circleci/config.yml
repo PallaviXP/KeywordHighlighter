@@ -23,6 +23,6 @@ jobs:
       - run: dotnet build
 
       # run tests!
-      #- run: dotnet test Tests/*.csproj
+      - run: dotnet test Tests/*.csproj
 
    
