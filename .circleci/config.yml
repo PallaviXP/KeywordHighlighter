@@ -27,6 +27,6 @@ jobs:
       - sudo apt-get install dotnet-dev-1.0.0-preview2-003131 
       - run: dotnet restore
       # run tests!
-      - run: dotnet test *.csproj
+      - run: dotnet test
 
    
