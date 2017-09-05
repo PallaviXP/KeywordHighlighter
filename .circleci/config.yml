@@ -27,10 +27,9 @@ jobs:
           - v1-dependencies
 
       - run: dotnet restore
-
-      - echo "-----------dotnet restore done----------"
+    
 
       # run tests!
       - run: dotnet test Tests/*.csproj
 
-      - echo "---------tests done--------------"
+   
